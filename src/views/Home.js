@@ -7,7 +7,7 @@ import SearchBar from '../components/searchBar/SearchBar';
 const Home = () => {
     const [videos, setVideos] = useState([]);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (searchTerm) => {
         console.log('caca')
         const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
@@ -15,7 +15,7 @@ const Home = () => {
                 part: 'snippet',
                 maxResults: 5,
                 key: KEY,
-                q: 'volatil'
+                q: searchTerm
             }
         })
         console.log(response.data.items)
