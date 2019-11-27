@@ -1,31 +1,18 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import './home.scss';
-import VideoList from '../components/videoList/VideoList';
-import SearchBar from '../components/searchBar/SearchBar';
+import Player1Container from '../containers/player1Container/Player1Container';
+import Player2Container from '../containers/player2Container/Player2Container';
+import MasterContainer from '../containers/masterContainer/MasterContainer';
 
 const Home = () => {
-    const [videos, setVideos] = useState([]);
-
-    const handleSubmit = async (searchTerm) => {
-        console.log('caca')
-        const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
-        const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-            params: {
-                part: 'snippet',
-                maxResults: 5,
-                key: KEY,
-                q: searchTerm
-            }
-        })
-        console.log(response.data.items)
-        setVideos(response.data.items)
-    };
-
     return (
-        <div className='main__container'>
-            <SearchBar handleFormSubmit={handleSubmit}/>
-            <VideoList videos={videos}/>
+        <div className='home__container'>
+            <h1 className='title'>YOUTUBE DJ</h1>
+            <div className='game__container'>
+                <Player1Container />
+                <MasterContainer/>
+                <Player2Container />
+            </div>
         </div>
     )
 }

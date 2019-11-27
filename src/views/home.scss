@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+.home__container {
+    .title {
+        text-align: center;
+        font-family: 'Permanent Marker', 'Sans Serif';
+        font-size: 40px;
+        color: #FFF;
+    }
+    .game__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

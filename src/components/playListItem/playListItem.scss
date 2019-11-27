@@ -1,0 +1,46 @@
+.playlist__item__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-height: 40px;
+    margin: 0;
+    border: 0.5px solid #777;
+    background-color: #465881;
+
+    &:hover {
+        background-color: #00909e;
+
+    }
+
+    .playlist__item__image__container {
+        padding: 2px;
+        max-height: 35px;
+        width: 80px;
+        max-width: 80px;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .playlist__item__title {
+        font-size: 0.8rem;
+    }
+
+    .playlist__item__buttons {
+        position: absolute;
+        right: 5px;
+        display: flex;
+        flex-direction: column;
+
+        i {
+            margin: 0 0 3px 0;
+
+            &:hover {
+                color: #1b2a49;
+            }
+        }
+    }
+}
