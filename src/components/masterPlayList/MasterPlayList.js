@@ -1,10 +1,10 @@
 import React from 'react';
-import PlayListItem from '../playListItem/PlayListItem';
-import './playList.scss';
+import MasterPlayListItem from '../masterPlayListItem/MasterPlayListItem';
+import './masterPlayList.scss';
 
-const PlayList = ({ videos, title, handleDeleteVideo}) => {
+const MasterPlayList = ({ videos, title, handleDeleteVideo}) => {
     const renderedList = videos.map((video, index) => {
-        return <PlayListItem handleDeleteVideo={handleDeleteVideo} key={index} video={video} />
+        return <MasterPlayListItem handleDeleteVideo={handleDeleteVideo} key={index} video={video} />
     });
 
     return (
@@ -16,4 +16,4 @@ const PlayList = ({ videos, title, handleDeleteVideo}) => {
         </div>
     )
 };
-export default PlayList;
+export default MasterPlayList;

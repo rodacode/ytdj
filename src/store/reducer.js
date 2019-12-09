@@ -2,7 +2,8 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension";
 
 const initialState = {
-    selectedVideos: []
+    selectedVideos: [],
+    playingVideo: '4fHw4GeW3EU'
 }
 
 export const reducer = (state, action) => {
@@ -16,6 +17,11 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 selectedVideos: [state.selectedVideos.filter((video) => video.etag !== action.payload.etag)]
+            }
+        case 'PLAY_VIDEO':
+            return {
+                ...state,
+                playingVideo: action.payload
             }
         default:
             return state

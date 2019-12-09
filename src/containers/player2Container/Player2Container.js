@@ -24,6 +24,7 @@ const Player2Container = () => {
         setVideos(response.data.items)
     };
     const handleVideoSelect = (video) => {
+        if (!selectedVideos.includes(video))
         setSelectedVideos([...selectedVideos,video])
     }
     const handleDeleteVideo = (video) => {

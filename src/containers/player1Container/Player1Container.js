@@ -23,7 +23,8 @@ const Player1Container = () => {
         setVideos(response.data.items)
     };
     const handleVideoSelect = (video) => {
-        setSelectedVideos([...selectedVideos,video])
+        if (!selectedVideos.includes(video))
+            setSelectedVideos([...selectedVideos, video])
     }
     const handleDeleteVideo = (video) => {
         setSelectedVideos(selectedVideos.filter((v) => v.etag !== video.etag))
@@ -34,9 +35,9 @@ const Player1Container = () => {
     return (
         <div className='player__container'>
             <h2 className='player__title'>Player 1</h2>
-            <SearchBar handleFormSubmit={handleSubmit}/>
-            <VideoList handleVideoSelect={handleVideoSelect} videos={videos}/>
-            <PlayList handleDeleteVideo={handleDeleteVideo} videos={selectedVideos} title='Player 1 Playlist' showAddButton="true"/>
+            <SearchBar handleFormSubmit={handleSubmit} />
+            <VideoList handleVideoSelect={handleVideoSelect} videos={videos} />
+            <PlayList handleDeleteVideo={handleDeleteVideo} videos={selectedVideos} title='Player 1 Playlist' showAddButton="true" />
         </div>
     )
 }
