@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from "react-redux";
 import './masterPlayListItem.scss';
 
-const MasterPlayListItem = ({ video, handleDeleteVideo}) => {
+const MasterPlayListItem = ({ video, handleDeleteVideo }) => {
     const dispatch = useDispatch();
     const playVideo = e => dispatch({ type: 'PLAY_VIDEO', payload: e })
 

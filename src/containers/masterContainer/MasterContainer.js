@@ -12,7 +12,7 @@ const MasterContainer = () => {
     const dispatch = useDispatch();
 
     const handleDeleteVideo = (video) => {
-        console.log(video)
+        console.log('deleted master video' + video)
         dispatch({ type: 'REMOVE_VIDEO', payload: video })
 
     }
