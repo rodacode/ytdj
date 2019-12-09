@@ -15,7 +15,7 @@ export const reducer = (state, action) => {
         case 'REMOVE_VIDEO':
             return {
                 ...state,
-                selectedVideos: [state.selectedVideos.map((video) => video.etag !== action.payload.etag)]
+                selectedVideos: [state.selectedVideos.filter((video) => video.etag !== action.payload.etag)]
             }
         default:
             return state

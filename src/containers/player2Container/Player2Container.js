@@ -11,7 +11,7 @@ const Player2Container = () => {
 
     const handleSubmit = async (searchTerm) => {
         console.log('caca')
-        const KEY = 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I';
+        const KEY = 'AIzaSyD_ytrpByILiH6EllcnW3bS1ujZBzQOIA8';
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',

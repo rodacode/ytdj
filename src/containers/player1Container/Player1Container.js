@@ -11,7 +11,7 @@ const Player1Container = () => {
     const [selectedVideos, setSelectedVideos] = useState([])
 
     const handleSubmit = async (searchTerm) => {
-        const KEY = 'AIzaSyBAhfy9snmO41AaIeWLMuQa6cOi1LIwDtg';
+        const KEY = 'AIzaSyD_ytrpByILiH6EllcnW3bS1ujZBzQOIA8';
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',
