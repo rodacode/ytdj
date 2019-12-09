@@ -20,7 +20,6 @@ const Player1Container = () => {
                 q: searchTerm
             }
         })
-        console.log(response.data.items)
         setVideos(response.data.items)
     };
     const handleVideoSelect = (video) => {
